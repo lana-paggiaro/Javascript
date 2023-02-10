@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variáveis</title>
+    <script type="text/javascript">
+        var variavel = "Cotil";
+        console.log("variavel: " + variavel);
+        console.log(typeof variavel);
+
+        variavel = 10;
+        console.log("variavel: " + variavel);
+        console.log(typeof variavel);
+
+        variavel = true;
+        console.log("variavel: " + variavel);
+        console.log(typeof variavel);
+
+        console.log("como ja dizia minha mãe: \"volte já pra casa casa menino, tá na hora do almoço\"");
+        console.log('como ja dizia minha mãe: "volte ja pra casa menino, tá na hora do almoço"');
+        console.log('Javascript is a incredible languge, i\'ve have never never seen anything similar');
+        console.log("Javascript is a indredible language, i've never saw anything similar");
+
+        /*escopo de var*/
+        var nome = 'Simone';
+        if(nome != null){
+            var sobrenome = 'Dapolito';
+            console.log(nome + ' ' + sobrenome);
+        }
+
+        //a var sobrenome é acessível mesmo fora do if onde foi declarada
+        console.log(nome + ' ' + sobrenome);
+
+        /* --- escopo de let*/
+        let colegio = 'Cotil';
+
+        if (colegio != null){
+            let universidade = 'Unicamp';
+            console.log(colegio + ' ' + universidade);
+        }
+
+        //console.log(colegio + ' ' + universidade); // it does not work because de variable let only works on the block its declared
+
+        /* ---- const ---- */
+        const IDADE = 18;
+        //IDADE = 21; // errado pois não pode alterar valor de constante
+        console.log(IDADE);
+        //const PI; // erro pois não foi incializada
+    </script>
+</head>
+<body>
+    <h1 id="titulo">Iniciando Javascript - Variáveis</h1>
+</body>
+</html>

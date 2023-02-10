@@ -15,14 +15,34 @@
         function mudarCor(){
             document.getElementById("minhaPag").style.backgroundColor = "pink";
         }
+
+        function trevas(){
+            document.getElementById("minhaPag").style.backgroundColor = "black";
+            document.getElementById("minhaPag").style.color = "white";
+        }
+
+        function normal(){
+            document.getElementById("minhaPag").style.backgroundColor = "white";
+            document.getElementById("minhaPag").style.color = "black";
+        }
     </script>
+    <noscript>
+        <style>
+            body{
+                background-color: red;
+                color: white;
+            }
+        </style>
+    </noscript>
 </head>
 <body id="minhaPag">
-    
+    <noscript>Para usar dequadamente esse site você precisa habilitar o Javascript no seu navegador!</noscript>
 
     <h1 id="titulo">Introdução ao Javascript</h1>
     <input type="button" value="Clique Aqui" onclick="exibirMsg();">
     <input type="button" value="Muda cor" onclick="mudarCor();">
+    <input type="button" value="Sou trevosa" onclick="trevas();">
+    <input type="button" value="Me arrependi" onclick="normal();">
 
 </body>
 </html>
