@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        //concatenando arrays - juntando em um s[o
+        var tecnico = ["LP", "BD", "DAW"];
+        var medio = ["Matemática", "Português", "Biologia"];
+        var formacaoCompleta = tecnico.concat(medio);
+
+        console.log("--------Arrays concatenados------");
+        console.log(formacaoCompleta);
+
+        //gerando String com elementos do array "tecnico"
+        var stringResultante = tecnico.join("-");
+        console.log("----------String resultante = " + stringResultante);
+
+        //copiando um pedaço do array
+        var formacaoBasica = medio.slice(1,1);
+        console.log("-------formacaoBasica = " + formacaoBasica);
+
+        //invertendo os elementos do array
+        tecnico.reverse();
+        console.log("---------Array invertido--------");
+        console.log(tecnico);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        /*forEach: a função de callback é executada para cada item da array.
+        
+        Ela possui 3 argumentos:
+            itemAtual (valor do item da array);
+
+
+        */
+
+        const carros = ['Ford', 'Fiat', 'Hyundai'];
+        //com função anônima
+        console.log("com função anônima\n");
+
+        carros.forEach(function(item, index, array){
+            console.log(item.toUpperCase());
+        });
+
+        //com arrow function 
+        console.log("\ncom arrow fuction\n");
+
+        /*carros.forEach((item. index, array) => {
+            console.log(item.toUpperCase());
+        })*/
+
+        carros.foreach((item, index, array) => {
+            array[index] = 'Carro ' + item;
+        });
+        console.log(carros);
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

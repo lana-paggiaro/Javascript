@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script>
+        //sort - Organiza o array pelo unicode e modifica o array original
+        console.log("-----Sort-----");
+        const instrumentos = ['Guitarra', 'Baixo', 'Violão'];
+        instrumentos.sort();
+        console.log(instrumentos);
+
+        const idades = [32,21,33,43,1,12,8];
+        idades.sort();
+        console.log(idades);
+
+        /*mapa - nos permite percorrer um vetor e obter um novo array cujos itens são o resultado de uma função de callback qe recebe como parâmetro cada item original. Funciona da mesma forma que o forEach(), 
+        porém ao invés de retornar undefined, retorna um novo array com valores atualizados de acordo com o return de cada iteraçõa. Se o objetivo for modificar e os valores do array atual, sempre utilize o map*/
+        const lista = [1,2,3,4,5,6];
+        console.log(lista);
+        //item = valor de cada posição
+        const novaLista = lista.map(
+            function(item){
+                return item * 5;
+            }
+        );
+        console.log("Resultado Map: " + novaLista);
+
+        //item = valor do item, indice = indice o array
+        const novaLista2 = lista.map(function(item, index){
+            return item + index;
+        });
+        console.log("Resultado Map2: " + novaLista2);
+
+        //com arrow function
+        const carros = ['Ford', 'Fiat', 'Honda'];
+        /*const newCarros = carros.map(function(item){
+            return 'Carro ' + item;
+        });*/
+
+        const newCarros = carros.map((item) => {
+            return 'Carro ' + item;
+        });
+
+        /*function concatenaCarros(item){
+            'Carro ' + item;
+        }*///forma antiga
+
+        console.log(carros); //['Ford', 'Fiat', 'Honda']
+        console.log(newCarros); //['Carro Ford', 'Carro Fiat', 'Carro Honda']
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
