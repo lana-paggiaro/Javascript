@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strings</title>
+
+    <script type = "text/javascript">
+
+        //string para char
+        var str = "hello";
+
+        var chars = [...str]; // spread operator; os tres pontinhos faz com que a string seja quebrada em um array de caracteres
+        console.log(chars);
+        // ['h', 'e', 'l', 'l', 'o']
+
+        var nome = 'Isabela';
+        var sobrenome = 'Silver';
+        var idade = 17;
+
+        console.log("Meu nome é" + nome + '' + sobrenome + ". Eu tenho" + idade + "anos."); // tanto "" quanto '' são utilizaveis para String
+
+        console.log(`Meu nome é ${nome} ${sobrenome}. Eu tenho ${idade} anos.`); // para essa utilização de variaveis, não é utilizado "" nem '', e sim ``
+        //facilita a leitura do codigo ^
+
+        //extraçao de parte de uma string
+
+        var texto = "Mergulhando em tecnologia.";
+        console.log(texto.substr(0, 11)); //retira o numero de caracteres a partir de x até y --> (x, y)
+
+        texto = 'Unicamp';
+        console.log("Tamanho:" + texto.length);
+        console.log(texto.toUpperCase()); //UNICAMP
+        console.log(texto.toLowerCase()); //unicamp
+
+        console.log("------ charAt() ------");
+        console.log(texto.charAt(3)); //c; localiza o caractere na posição indicada
+
+        console.log("----- Sprilt() -----")
+        texto = "17/02/2023";
+        var aux = texto.split("/");
+        console.log(aux);
+
+        if(aux[1] == '02') { // se aux na posição 1 for 2
+            var mes = 'Fevereiro'; // aux = fevereiro
+        }
+
+        console.log('Limeira, ' + aux[0] + ' de ' + mes + ' de ' + aux[2]); // Limeira, 17 de Fevereiro de 2023
+
+        var texto2 = "COTIL-UNICAMP-LIMEIRA";
+
+        console.log("----- indexOf -----"); // devolve o indice de uma determinada string
+        console.log(texto2.indexOf('LIMEIRA')); // devolve onde começou a string 'LIMEIRA' --> posição 14
+
+        //startsWith e endsWith
+        var nomeTeste = 'Silver';
+        console.log(nomeTeste.startsWith('Sil')); // true
+        console.log(nomeTeste.endsWith('ir')); // false
+
+        //replace - substituir parte de uma string por outra
+        var nome = "André";
+        var comunicacao = "Olá Sr. nomeusuario, informamos que a partir da presente data o senhor tem 50% de desconto em nossa loja.";
+        console.log(comunicacao.replace("nomeusuario", nome));
+
+        //trim - remove os espaços em branco no inicio ou fim de uma string
+        var login = "    andre@gmail.com    ";
+        let loginSemEspaco = login.trim();
+        console.log(loginSemEspaco); //andre@gmail.com
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

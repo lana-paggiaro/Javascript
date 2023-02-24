@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <script type="text/javascript">
+        //criando array, definindo o tamanho
+        var a = new Array(10); //cada posição pode ter uma tipagem diferente
+
+        a[0] ="xyz";
+        a[1] = true;
+        a[2] = 1.500;
+        console.log(a);
+
+        //declarando um Array na forma literal
+        var nomes = ['Felipe'];
+        console.log("------Array Inicial------");
+        console.log(nomes);
+        console.log(nomes.length); // length retorna o tamanho da lista (nesse caso é 1)
+
+        //Adicionar um elemento ao final de um array
+        nomes.push('Kennedy');
+        console.log("---------------------");
+        console.log(nomes);
+        console.log(nomes.length); // tamanho igual a 2
+
+        //mesmo que 12 nao seja do tipo str, o código roda
+        nomes.push(12);
+        nomes.push(false);
+
+        //adiciona um elemento no inicio de um array
+        nomes.unshift('Ana');
+        console.log(nomes);
+
+        //criando array de array
+        var multidimensional = [ [1,2,3], [4,5,6], [7,8,9]];
+        console.log("---- Array de Array ----");
+        console.log(multidimensional);
+
+        //deleta o valor, mantendo a posição
+        delete nomes[1];
+        console.log(nomes);
+
+        //remover e retornar o ultimo elemento de um array - pop
+        var nome = nomes.pop();
+        console.log("elemento removido: " + nome);
+        console.log(nomes);
+
+        //removendo e retornando o 1o elemento de um array - shift
+        nome = nomes.shift();
+        console.log("Elemento removido: " + nome);
+
+        //splice - voce especifica o indice inicial e a quantidade de elementos a serem removidos incluindo o elemento do incide inicial
+        var test = [1, 2, 3, 4];
+        test.splice(2,1);
+        console.log(test);
+
+        console.log("----------------");
+        console.log(typeof nomes); //retorna object
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
