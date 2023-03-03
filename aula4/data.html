@@ -6,32 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datas</title>
     <script type="text/javascript">
-        var hoje = new Date(); //data atual
+        let hoje = new Date(); //data atual
         console.log(hoje);
         console.log(typeof hoje);
 
-        var dataPassada = new Date("01/22/1994 15:23:35"); //data passada
+        let dataPassada = new Date("01/22/1994 15:23:35"); //data passada
         console.log(dataPassada);
         console.log(typeof dataPassada);
 
-        var data1 = new Date("07/25/2017 15:29:40");
+        let data1 = new Date("07/25/2017 15:29:40");
         console.log(data1);
         console.log(typeof data1);
 
         //meses - jan 0 e dez 11
         //ano, mes, dia, hora, min, seg
 
-        var data2 = new Date(1994, 0, 22, 15, 23, 35);
+        let data2 = new Date(1994, 0, 22, 15, 23, 35);
         console.log(data2);
         console.log(typeof data2);
 
         //formatando data
-        var hoje2 = new Date(); //data atual
+        let hoje2 = new Date(); //data atual
         console.log(hoje2);
-        var dia = hoje2.getDate();
-        var mes = hoje.getMonth(); //jan=0, fev=1 e etc
-        var ano = hoje2.getFullYear();
-        var diaSemanaNum = hoje2.getDay(); //0=domingo e assim por diante
+        let dia = hoje2.getDate();
+        let mes = hoje.getMonth(); //jan=0, fev=1 e etc
+        let ano = hoje2.getFullYear();
+        let diaSemanaNum = hoje2.getDay(); //0=domingo e assim por diante
 
         /*if(diaSemanaNum == 0){
             diaSemanaTexto = 'Domingo';
@@ -39,22 +39,22 @@
             diaSemanaTexto = 'Segunda';
         }...*/
 
-        var semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
-        var diaSemanaTextual = semana[diaSemanaNum];
+        let semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+        let diaSemanaTextual = semana[diaSemanaNum];
 
-        var meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
-        var mesText = meses[mes];
+        let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+        let mesText = meses[mes];
 
-        var hora = hoje2.getHours();
-        var min = hoje2.getMinutes();
-        var seg = hoje2.getSeconds();
+        let hora = hoje2.getHours();
+        let min = hoje2.getMinutes();
+        let seg = hoje2.getSeconds();
 
         console.log(diaSemanaTextual + ", " + dia + " de " + mesText + " de " + ano + " - " + hora + ":" + min + ":" + seg);
 
         console.log('${diaSemanaTextual}, ${dia} de ${mesText} de ${ano} = ${hora}:${min}:${seg}');
 
-        var dataX = new Date(10/06/2018);
-        var dataY = new Date(10/05/2018);
+        let dataX = new Date(10/06/2018);
+        let dataY = new Date(10/05/2018);
 
         //if (dataX == dataY) {} //não funciona pq para comparar se datas são iguais, é necess´ario utilizar os millisegundos
 

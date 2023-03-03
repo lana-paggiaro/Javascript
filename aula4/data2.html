@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        div{
+            background-color: black;
+            height: 30px;
+            color: white;
+            text-align: right;
+            padding-top: 7px;
+            padding-right: 5px;
+            width: calc(100vw-padding);
+        }
+        #saudacao{
+            font-size: 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        let hoje = new Date(); //data atual
+        function escreveData(){
+            hoje = new Date(); //data atual
+            let dia = hoje.getDate();
+            let mes = hoje.getMonth(); //jan=0, fev=1 e etc
+            let ano = hoje.getFullYear();
+            let diaSemanaNum = hoje.getDay(); //0=domingo e assim por diante
+
+            let semana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+            let diaSemanaTextual = semana[diaSemanaNum];
+
+            let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+            let mesText = meses[mes];
+
+            let hora = hoje.getHours();
+            let min = hoje.getMinutes();
+            let seg = hoje.getSeconds();
+
+            let dataExtenso = diaSemanaTextual + ", " + dia + " de " + mesText + " de " + ano + " - " + hora + ":" + min + ":" + seg;
+            console.log(diaSemanaTextual + ", " + dia + " de " + mesText + " de " + ano + " - " + hora + ":" + min + ":" + seg);
+            document.getElementById("data").textContent = dataExtenso;
+            configByTime();
+        }
+
+        setInterval(escreveData, 1000);
+
+        function configByTime(){
+            if(hoje.getHours() < 18){
+                document.getElementById("body").style.backgroundColor="pink";
+                document.getElementById("body").style.color="black";
+                if(hoje.getHours() < 12){
+                    document.getElementById("saudacao").textContent = "Bom dia!";
+                } else {
+                    document.getElementById("saudacao").textContent = "Boa tarde!";
+                }
+            }else{
+                document.getElementById("body").style.backgroundColor="gray";
+                document.getElementById("body").style.color="white";
+                document.getElementById("saudacao").textContent="Boa noite!";
+            }
+        }
+
+    </script>
+</head>
+<body id="body" onload="escreveData()">
+    <div id="data"></div>
+    <span id="saudacao"></span>
+</body>
+</html>
