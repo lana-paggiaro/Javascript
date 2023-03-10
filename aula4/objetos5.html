@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 5</title>
+    <script>
+        var curso = {
+            sigla: "TI", nome: "Técnico em Informática"
+        }
+
+        var x = {...curso}; //cópia
+        //var x = curso; //referencia, ponteiro
+        x.sigla = "SI";
+        x.nome = "Sistemas de Informação";
+
+        console.log(curso.sigla);
+        console.log(x.sigla);
+
+        console.log(curso.nome);
+        console.log(x.nome);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

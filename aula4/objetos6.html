@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 6</title>
+    <script>
+        var curso = {
+            sigla: "TI", nome: "Técnico em Informática"
+        }
+
+        //imprime true
+        console.log("sigla" in curso);
+
+        //imprime TI
+        console.log(curso.sigla);
+
+        delete curso.sigla;
+
+        //imprime falso 
+        console.log("sigla" in curso);
+
+        //imprime undefined
+        console.log(curso.sigla);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desconstrução de Objetos</title>
+    <script>
+        const PESSOA = {
+            nome: "Simone", sobrenome: "Dapólito", idade: 18, cargo: "Professora"
+        }
+
+        console.log(PESSOA); //imprime o obj todo
+
+        //let nome = pessoa.nome
+        let{nome} = PESSOA; //declara var nome com o conteudo do atributo pessoa.nome
+        console.log(nome);
+
+        let{sobrenome} = PESSOA;
+        console.log(sobrenome);
+
+        let{idade, cargo} = PESSOA;
+        console.log(idade);
+        console.log(cargo);
+
+        //let funcao = pessoa.cargo;
+        let{cargo:funcao} = PESSOA; //declara var funcao com o conteudo do atributo pessoa.cargo
+        console.log(funcao);
+
+        nome = "Maria"; // altera o valor de nome na var nome, mas o objeto continua com o valor original
+        //pessoa.nome = "Ana"; // altera DENTRO de pessoa
+        console.log(nome);
+        console.log(PESSOA);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
