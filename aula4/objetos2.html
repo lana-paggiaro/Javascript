@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos 2</title>
+    <script>
+        var curso = {
+            sigla: "TI",
+            nome: "Técnico em Informática",
+            disciplinas: [
+                {
+                    sigla: "DAW", nome: "Desenvolvimento de Aplicações Web"
+                },
+                {
+                    sigla: "LPM", nome: "Linguagem de Programação Multiplataforma"
+                },
+            ]
+        };
+
+        console.log(curso.sigla);
+        console.log(curso.nome);
+        console.log(curso.disciplinas);
+
+        curso.sigla = "DS";
+        curso.nome = "Desenvolvimento de Sistemas";
+
+        console.log(curso.disciplinas[0].sigla);
+        console.log(curso.disciplinas[0].nome);
+        curso.disciplinas[0].sigla = "DAW";
+
+        console.log(curso.disciplinas[1].sigla);
+        console.log(curso.disciplinas[1].nome);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
