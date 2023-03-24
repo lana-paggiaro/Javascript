@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What</title>
+    <script type="text/javascript">
+        function destacaTabela() {
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "yellow";
+            tabela.style.fontSize = "20px";
+            tabela.style.transform = "rotate(30deg)";
+            tablea.style.transitionDuration = "2s";
+        }
+        function voltaTabela(){
+            var tabela = document.getElementById("tabelaAlunos");
+            tabela.style.backgroundColor = "white";
+            tabela.style.fontSize = "16px";
+            tabela.style.transform = "rotate(0deg)";
+            tabela.style.transitionDuration = "2s";
+        }
+    </script>
+</head>
+<body>
+    <img src="scoobydoo.jpg" width="100px" id="logo" onmouseover="this.src = 'scoobydoo2.jpg'" onmouseout="this.src = 'scoobydoo.jpg'">
+    <hr>
+    <table border="1px" id="tabelaAlunos" onmouseover="destacaTabela();" onmouseout="voltaTabela();">
+        <tr>
+            <th>RA</th>
+            <th>Nome</th>
+        </tr>
+        <tr>
+            <td>1234</td>
+            <td>Simone</td>
+        </tr>
+        <tr>
+            <td>5678</td>
+            <td>Elaine</td>
+        </tr>
+    </table>
+</body>
+</html>

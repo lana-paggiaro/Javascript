@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visible</title>
+    <script type="text/javascript">
+        function escondeLinks(){
+            let i = 0;
+            while(i <= document.getElementsByName('link').lenght){
+                document.getElementsByName('link')[i].style.display = 'none';
+                i++;
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="https://www.cotil.unicamp.br" name="link">Cotil</a>
+    <a href="http://www.unicamp.br" name="link">Unicamp</a>
+    <a href="http://www.g1.com.br" name="link">G1</a>
+    <hr>
+    <p id="paragrafo"><b>Parágrafo 1</b></p>
+    <p>Quatro adolescentes metidos a detetives — Fred, Velma, Daphne e Salsicha — com Scooby-Doo, um Dogue Alemão falante, viajam numa van chamada Máquina de Mistério, 
+    e ajudam a investigar casos misteriosos. Visitam lugares inóspitos, casas mal-assombradas, parques abandonados, pântanos e ilhas — na maioria das vezes ameaçados
+    por monstros, zumbis e outros tipos de vilões; mas, considerando os episódios, são geralmente chamados de "fantasmas", mesmo não sendo.</p>
+    <button onclick="escondeLinks();">Versão para impressão</button>
+</body>
+</html>
