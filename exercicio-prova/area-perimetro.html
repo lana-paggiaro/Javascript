@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área e Perímetro</title>
+</head>
+<script type="text/javascript">
+    var msg = "";
+    var color = "";
+
+    function calcularArea(){
+        var raio = document.getElementById("raio").value;
+        var area = 0;
+        area = Math.PI * raio * raio;
+        document.getElementById("msgArea").value = area;
+    }
+
+    function calcularPerimetro(){
+        var raio = document.getElementById("raio").value;
+        var perimetro = 0;
+        perimetro = 2 * Math.PI * raio;
+        color = "blue";
+        document.getElementById("msgPerimetro").textContent = perimetro;
+        document.getElementById("msgPerimetro").style.color = color;
+    }
+</script>
+<body>
+    <label for="raio">Raio:</label><br>
+    <input type="text" name="raio" id="raio"><br><br>
+    <input type="button" value="Área" onclick="calcularArea();">
+    <input type="button" value="Perímetro" onclick="calcularPerimetro();"><br><br>
+    <label for="msgArea">Área:</label>
+    <input type="text" name="msgArea" id="msgArea"><br><br>
+    <label for="msgPerimetro">Perímetro:</label>
+    <span id="msgPerimetro"></span>
+</body>
+
+    <!--
+        if(raio.trim() == ""){
+            document.getElementById("msg").textContent = "Informe o raio";
+            document.getElementById("msg").style.color = "red";
+            document.getElementById("msg").style.fontWeight = "bold";
+            document.getElementById("msg").style.fontSize = "12px";
+            exit();
+        } else {
+            var perimetro = 0;
+            perimetro = 2 * Math.PI * raio;
+            msg = perimetro;
+            document.getElementById("msgPerimetro").innerHTML = "<b>" + msg + "</b>";
+        }
+------------------------------------------------------------------------------------------
+        if(raio.trim() == ""){
+            document.getElementById("msg").textContent = "Informe o raio";
+            document.getElementById("msg").style.color = "red";
+            document.getElementById("msg").style.fontWeight = "bold";
+            document.getElementById("msg").style.fontSize = "12px";
+            exit();
+        } else {
+            var raio = document.getElementById("raio").value;
+            var area = 0;
+            area = Math.PI * raio * raio;
+            msg = area;
+            document.getElementById("msgArea").innerHTML = "<b>" + msg + "</b>";
+        }
+    -->
+</html>
