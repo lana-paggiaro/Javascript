@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 50px;
+            height: 50px;
+            border-style: solid;
+            border-color: black;
+        }
+        
+        #produto{
+            width: 80px;
+            height: auto;
+            padding-top: 10px;
+        }
+    </style>
+    <script type="text/javascript">
+
+    //on mouse move
+        function exibirValor(){
+            var valor = document.getElementById('capacitacao').value;
+            document.getElementById('valor').textContent = valor;
+        }
+
+    //on key up
+        function contarCaracteres(){
+            var tamMax = 10;
+            var texto = document.getElementById('nome').value;
+            document.getElementById('numeroCaracteres').textContent = texto.length;
+            document.getElementById('numeroCaractRestante').textContent = tamMax - texto.length;
+        }
+
+    //on change
+        function exibirCor(){
+            var cor = document.getElementById('corPreferida').value;
+            document.getElementById('texto').style.color = cor;
+            document.getElementById('fundo').style.backgroundColor = cor;
+        }
+
+    //
+        function somasub(op){
+            let num = parseInt(document.getElementById('resultado').textContent);
+
+            if (op == "+") {
+                num++;
+            } else if (op == "-") {
+                num--;
+            }
+
+            document.getElementById('resultado').textContent = num;
+
+            if ((parseInt(document.getElementById('resultado').textContent)) <= 0) {
+                //document.ge tElementById('resultado').style.color = "red";
+                document.getElementById('sub').disabled = true;
+            } else {
+                //document.getElementById('resultado').style.color = "black";
+                document.getElementById('sub').disabled = false;
+            }
+        }
+    </script>
+</head>
+<body>
+    
+    <form>
+        <!--ON MOUSE MOVE-->
+        Capacitação: <br>
+        <input type="range" id="capacitacao" min="0" max="10" value="0" onmousemove="exibirValor()">
+        <span id="valor">0</span>
+        <br><br>
+
+        <!--ON KEY UP-->
+        Nome: <br>
+        <input type="text" id="nome" maxlength="10" onkeyup="contarCaracteres()">
+        <span id="numeroCaracteres">0</span> caracteres /
+        <span id="numeroCaractRestante">10</span> caracteres restantes
+        <br><br>
+
+        <!--ON CHANGE-->
+        Cor preferida:<br>
+        <input type="color" id="corPreferida" onchange="exibirCor()">
+        <br><br>
+        <span id="texto">Minha cor preferida</span>
+        <div id="fundo"></div>
+        <br><br>
+
+        <!-- -->
+        <div id="produto">
+            <img src="https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&w=1024&resize=1200,800" width="80px" height="100px">
+            <br><br>
+            <input id="soma" type="button" value="+" onclick="somasub('+')">
+            <span id="resultado">0</span>
+            <input id="sub" type="button" value="-" onclick="somasub('-')">
+        </div>
+
+    </form>
+</body>
+</html>

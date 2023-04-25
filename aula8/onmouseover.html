@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .margem{
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function destacaTabela(){
+            var tabela = document.getElementById("tabelaPopper");
+            tabela.style.backgroundColor = "pink";
+            tabela.style.fontSize = "20px";
+            tabela.style.transform = "rotate(30deg)";
+            tabela.style.transitionDuration = "2s";
+        } 
+
+        function voltaTabela(){
+            var tabela = document.getElementById("tabelaPopper");
+            tabela.style.backgroundColor = "white";
+            tabela.style.fontSize = "16px";
+            tabela.style.transform = "rotate(0deg)";
+            tabela.style.transitionDuration = "2s";
+        }
+
+    </script>
+</head>
+<body>
+    
+    <!--<img src="https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&w=1024&resize=1200,800" 
+    id="cato" onmouseover="this.src = 'https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&w=1024&resize=1200,800';"
+    onmouseout="this.src = 'https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg?quality=90&strip=info&w=1024&resize=1200,800';">-->
+    <hr>
+    <table border="1px" class="margem" id="tabelaPopper" onmouseover="destacaTabela();" onmouseout="voltaTabela();">
+        <tr>
+            <th>POP</th>
+            <th>CAT</th>
+        </tr>
+        <tr>
+            <td>popopop</td>
+            <td>catcatcat</td>
+        </tr>
+        <tr>
+            <td>pop</td>
+            <td>popopop</td>
+        </tr>
+    </table>
+</body>
+</html>
