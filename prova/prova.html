@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova da Simone</title>
+</head>
+<script>
+    function conversaoF(){
+        let c = document.getElementById("celsius").value;
+        if(c.trim() == ""){
+            document.getElementById("errocelsius").textContent = "Campo obrigatório";
+            document.getElementById("errocelsius").style.fontSize = "12px";
+            document.getElementById("errocelsius").style.fontWeight = "bold";
+            document.getElementById("errocelsius").style.color = "red";
+        } else{
+            let celsius = Number(document.getElementById("celsius").value);
+            let fahrenheit = 0;
+            fahrenheit = (celsius * 1.8) + 32;
+            document.getElementById("fahrenheit").value = fahrenheit;
+            document.getElementById("errocelsius").textContent = "";
+        }
+    }
+
+    function conversaoK(){
+        let c = document.getElementById("celsius").value;
+        if(c.trim() == ""){
+            document.getElementById("errocelsius").textContent = "Campo obrigatório";
+            document.getElementById("errocelsius").style.fontSize = "12px";
+            document.getElementById("errocelsius").style.fontWeight = "bold";
+            document.getElementById("errocelsius").style.color = "red";
+        }else{
+            let celsius = Number(document.getElementById("celsius").value);
+            let color = "red";
+            let kelvin = 0;
+            kelvin = celsius + 273.15;
+            document.getElementById("kelvin").textContent = kelvin;
+            document.getElementById("kelvin").style.color = color;
+            document.getElementById("errocelsius").textContent = "";
+        }
+    }
+</script>
+<body>
+    <h1>Prova de Javascript</h1>
+    <!--Celsius-->
+    <label for="celsius">Temperatura em Celsius: </label><br>
+    <input type="text" id="celsius"> °C <span id="errocelsius"></span><br><br>
+    <!--Botões-->
+    <input type="button" id="converterF" value="Converter F" onclick="conversaoF();">
+    <input type="button" id="converterK" value="Converter K" onclick="conversaoK();"><br><br>
+    <!--Fahrenheit-->
+    <label for="fahrenheit">Temperatura em Fahrenheit: </label><br>
+    <input type="text" id="fahrenheit"> °F <span id="errofahrenheit"></span><br><br>
+    <!--Kelvin-->
+    <label for="kelvin">Temperatura em Kelvin: </label><br>
+    <span id="kelvin"></span> °K<br><br><br>
+
+    <span style="font-size: 12px;">Luanna Sachinelli Paggiaro - 3ºTDSMD</span>
+</body>
+</html>
