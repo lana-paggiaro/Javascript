@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <script type="text/javascript">
+        function configPage(){
+            document.getElementById("cnpj").style.display = "none";
+        }
+
+        function verificarTipo(tipo){
+            if(tipo == "PF"){
+                document.getElementById("cpf").style.display = "block";
+                document.getElementById("cnpj").style.display = "none";
+            }else{
+                document.getElementById("cpf").style.display = "none";
+                document.getElementById("cnpj").style.display = "block";
+            }
+        }
+
+        function enviarDados(){
+            if((document.dados.tipo.value == "PF") && (document.dados.tx_nome.value == "" || document.dados.tx_nome.lenght > 8)){
+                formataMsg("Preencha o campo nome corretamente!");
+                document.dados.tx_nome.focus();
+                return false;
+            }
+
+            if((document.dados.tipo.value == "PJ") && (document.dados.tx_razao.value == "" || document.dados.tx_razao.value.lenght < 8)){
+                formataMsg("Preencha o campo razão social corretamente!");
+                document.dados.tx_email.focus();
+                return false;
+            }
+
+            
+
+            if((document.dados.tx_mensagem.value.lenght < 50)){
+                formataMsg("É necessáio preencher o campo mensagem com no mínimo 50 caracteres!");
+                document.dados.tx_mensagem.focus();
+                return false;
+            }
+        }
+
+        function formataMsg(){
+            /*document.getElementById("msg").innerHTML = "<p>" + msg + "</p>";*/
+            //COPILOT
+        }
+    </script>
+</head>
+<body onload="configPage();">
+    <h1>Faça seu cadastro</h1>
+    <div id="msg"></div>
+    <br>
+    <form method="post" name="dados" id="dados" onsubmit="return enviarDados();">
+        Pessoa Física <input type="radio" name="tipo" id="PF" value="PF" onclick="verificarTipo(this.value);" checked>
+        Pessoa Jurídica <input type="radio" name="tipo" id="PJ" value="PJ" onclick="verificarTipo(this.value);">
+        <br>
+        <div id="cpf">
+            <br> CPF:<br>
+            <input type="text" name="tx_cpf" id="tx_cpf" size="20" maxlength="14">
+            <br><br>
+            Nome completo:<br>
+            <input type="text" name="tx_nome" id="tx_nome" size="52" maxlength="50">
+        </div>
+        <div id="cnpj">
+            <br> CNPJ:<br>
+            <input type="text" name="tx_cnpj" id="tx_cnpj" size="20" maxlength="18">
+            <br><br>
+            Razão Social:<br>
+            <input type="text" name="tx_razao" id="tx_razao" size="52" maxlength="50">
+        </div>
+        <br>
+        E-mail:<br>
+        <input type="text" name="tx_email" id="tx_email" size="52" maxlength="50">
+        <br><br>
+        Mensagem:<br>
+        <textarea name="tx_mensagem" id="tx_mensagem" cols="53" rows="8"></textarea>
+        <br><br>
+        <input type="submit" name="Submit" value="Enviar Dados">
+        <input name="Reset" type="reset" value="Redefinir">
+    </form>
+</body>
+</html>

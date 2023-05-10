@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+    <script>
+        /*NÃO ESTÁ FUNCIONANDO*/
+        function calcVelocidade(){
+            var d = document.querySelector('#d').value;
+            var t = document.querySelector('#t').value;
+
+            if((d == "") || (t == "")){
+                alert("Distância e tempo são obrigatórios");
+            } else {
+                document.querySelector('#vm').value = parseInt(d)/parseInt(t);
+                if((parseInt(d)/parseInt(t)) > 100){
+                    document.querySelector("#obs").style.color = "red";
+                    document.querySelector("#obs").textContent = "Velocidade acima do permitido";
+                }else{
+                    document.querySelector("#obs").textContent = "";
+                }
+            }
+        }        
+    </script>
+</head>
+<body>
+    <label>Distância:</label><br>
+    <input type="text" id="d"><br><br>
+    <label>Tempo:</label><br>
+    <input type="text" id="t"><br><br>
+    <input type="submit" onclick="calcVelocidade();"><br><br>
+    <label>Velocidade:</label>
+    <span id="vm"></span><br><br><span id="obs"></span>
+</body>
+</html>
