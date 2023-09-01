@@ -1,0 +1,42 @@
+ex1
+var pilha1, pilha2, pilha3;
+var qntdLivros;
+var prateleiras;
+
+scanf("%d %d %d %d", "pilha1", "pilha2", "pilha3", "prateleiras");
+
+qntdLivros = pilha1 + pilha2 + pilha3;
+var distribuicao = qntdLivros / prateleiras;
+var x = distribuicao * prateleiras;
+var resto = x - qntdLivros;
+
+if(resto != "0"){
+	printf("%d", "resto");
+} else {
+	printf("0");
+} (tinha que ser um int pra n dar num quebrado)
+
+ex2
+n - numero de topicos
+nome do topico / numero de palavras / palavras
+x - num de palavras ex
+xi - palavras do ex
+ !usa matriz!
+ array com o nome de cada topico e cada topico tem uma array list com o numero K de rows contendo cada palavra
+ depois mais uma array list com o numero X de rows
+ depois só um if(x.contains) com as palavrinhas e se conter deve printar o nome do topico
+
+ex3
+ai dificil
+g - num de garrafoes
+boolean m - se 1 cria-se varias piramides se 2 é só uma
+porra geometria analítica que merda
+
+ex4
+matriz brrr
+nossa fudido
+n - num de cidades
+k - tipos de fruta
+ele mesmo fala de matriz aiiii
+n entendi o esquema de estradas
+fudido fodase
